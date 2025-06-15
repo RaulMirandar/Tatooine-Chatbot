@@ -1,5 +1,16 @@
-<div class="text-input">
-    <p [className]="">Hola soy la parte para hablar con el chatbot!</p>
-  <input type="text" placeholder="Escribe aquí..." />
-  <button>Enviar</button>
+<div class="container-lg text-center">
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div class="card-title">
+        <h2>Chatbot</h2>
+      </div>
+      <p class="card-text">
+        ¡Hola! Soy un chatbot. ¿En qué puedo ayudarte hoy?
+      </p>
+      <input type="text" formControlName="query" placeholder="Escribe aquí..." />
+      <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
 </div>
