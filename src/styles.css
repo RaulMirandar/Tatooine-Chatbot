@@ -1,1 +1,330 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap'); /* Importing Orbitron from Google Fonts */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0E68C; /* Sandy color inspired by Tatooine */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6B4F34; /* Darker, desaturated brown for header */
+    color: #FFE81F; /* Star Wars yellow for text */
+    padding: 1.5em 0;
+    text-align: center;
+    border-bottom: 3px solid #4A3B2A; /* Even darker brown for border */
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Star Jedi', 'Impact', 'Arial Black', sans-serif; /* Star Wars-like font, with fallbacks */
+    font-size: 2.8em;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #A0522D; /* Sienna color for navigation */
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: #FFE81F; /* Star Wars yellow for nav links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFF; /* White on hover */
+    text-decoration: none;
+}
+
+main {
+    padding: 25px;
+}
+
+#hero {
+background-image: url('/assets/tatooine-bg.jpg');  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #D2B48C; /* fallback */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+#hero h2 {
+    font-size: 3em;
+    text-shadow: 3px 3px 6px #000000; /* Enhanced text shadow for readability */
+    font-family: 'Star Jedi', 'Impact', sans-serif;
+}
+
+#hero p {
+    font-size: 1.3em;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+#about, #services {
+    margin-top: 30px; /* Increased margin for better separation */
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #FFFACD; /* Lemon chiffon - a very light sandy color for content boxes */
+    border: 2px solid #B8860B; /* DarkGoldenRod border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+#about h3, #services h3 {
+    color: #8B4513; /* SaddleBrown for section titles */
+    border-bottom: 2px solid #D2B48C; /* Tan border under titles */
+    padding-bottom: 10px;
+    font-family: 'Orbitron', sans-serif; /* A slightly techy/sci-fi font */
+}
+
+#services ul {
+    list-style-type: none; /* Removing default bullets */
+    padding-left: 0;
+}
+
+#services ul li {
+    background-color: #F5F5DC; /* Beige background for list items */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #8B4513; /* SaddleBrown accent line */
+    border-radius: 5px;
+}
+
+.droid-font {
+    font-family: 'Courier New', Courier, monospace; /* Generic monospace font for a "droid" feel */
+    color: #36454F; /* Charcoal grey, could be a datapad text color */
+}
+
+footer {
+    text-align: center;
+    padding: 20px; /* Increased padding */
+    background-color: #6B4F34; /* Same as header */
+    color: #FFE81F; /* Star Wars yellow */
+    border-top: 3px solid #4A3B2A; /* Even darker brown for border */
+    margin-top: auto;
+}
+
+/* Basic responsive design for smaller screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+    nav ul li {
+        margin-right: 15px;
+        font-size: 1em;
+    }
+    #hero h2 {
+        font-size: 2.3em;
+    }
+     #hero p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+        margin-right: 0;
+        background-color: #8B4513; /* Slightly darker item background on mobile nav */
+        padding: 5px;
+        border-radius: 3px;
+    }
+    nav ul li a {
+        display: block; /* Make links fill the li */
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+    #about h3, #services h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Attempt to import a Star Wars-like font (Star Jedi).
+   Note: This relies on the font being hosted and accessible.
+   If not, the fallback fonts will be used.
+   For a real project, you'd host the font file or use a reliable CDN.
+*/
+@font-face {
+    font-family: 'Star Jedi';
+    src: url('https://example.com/fonts/Starjedi.ttf') format('truetype'); /* Replace with actual font URL if available */
+    /* It's common to not find a free, universally hostable version of "Star Jedi".
+       Consider alternatives like 'Orbitron' (Google Fonts) for a sci-fi feel, or rely on fallbacks. */
+}
+
+/* Chatbot Styles */
+.chatbot-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8B4513; /* SaddleBrown, consistent with theme */
+    color: #FFE81F; /* Star Wars yellow */
+    padding: 10px 15px;
+    border-radius: 50px; /* Circular or pill shape */
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1em;
+    z-index: 1000; /* Ensure it's above other content */
+    transition: background-color 0.3s ease;
+}
+
+.chatbot-toggle-button:hover {
+    background-color: #A0522D; /* Sienna, slightly lighter on hover */
+}
+
+.chatbot-popup {
+    position: fixed;
+    bottom: 80px; /* Position above the toggle button */
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: #FFFACD; /* LemonChiffon, similar to content boxes */
+    border: 2px solid #B8860B; /* DarkGoldenRod border */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 999; /* Below toggle button if it needs to overlap, but generally also high */
+    overflow: hidden; /* Ensures content respects border radius */
+}
+
+.chatbot-popup.hidden {
+    display: none;
+}
+
+.chatbot-header {
+    background-color: #6B4F34; /* Dark desaturated brown from header */
+    color: #FFE81F; /* Star Wars yellow */
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.chatbot-header span {
+    font-weight: bold;
+}
+
+.chatbot-close-btn {
+    background: none;
+    border: none;
+    color: #FFE81F;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.chatbot-close-btn:hover {
+    color: #FFF;
+}
+
+.chatbot-content {
+    padding: 15px;
+    flex-grow: 1; /* Allows this section to take available space */
+    overflow-y: auto; /* Scroll for long conversations */
+    background-color: #F5F5DC; /* Beige, for the chat area */
+    color: #333;
+}
+
+.chatbot-content p {
+    margin-top: 0;
+}
+
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #D2B48C; /* Tan border */
+    background-color: #FFF8DC; /* Cornsilk, slightly off-white */
+}
+
+.chatbot-input input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #B8860B;
+    border-radius: 3px;
+    margin-right: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.chatbot-input button {
+    background-color: #8B4513; /* SaddleBrown */
+    color: #FFE81F;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.chatbot-input button:hover {
+    background-color: #A0522D; /* Sienna */
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #F5DEB3;
+}
+
+
+
+
+/* styles.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #F5DEB3;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #F5DEB3;
+}
+
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+

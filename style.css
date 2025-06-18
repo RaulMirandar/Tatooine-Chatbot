@@ -172,3 +172,25 @@ footer {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap'); /* Importing Orbitron from Google Fonts */
+/* styles.css */
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: red !important;
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #F5DEB3;
+}
